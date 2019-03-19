@@ -3,25 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Excercise_1
 {
 
     public class FunctionsContainer
     {
-        public delegate double func(double value);
-        private Dictionary<string, func> funcDictionary;
+
+        
+        private Dictionary<string, Excercise_1.func> funcDictionary;
 
         public FunctionsContainer()
         {
-            funcDictionary = new Dictionary<string, func>();
+            funcDictionary = new Dictionary<string, Excercise_1.func>();
         }
-        public func this[string name]
+        public Excercise_1.func this[string name]
         {
             get
             {
                 // return the value specified by index
-                return funcDictionary[name];
+                if (this.funcDictionary.ContainsKey(name))
+                {
+                    return funcDictionary[name];
+                }
+                else
+                {
+                    return val => val;
+                }
             }
             set
             {

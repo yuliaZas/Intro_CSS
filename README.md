@@ -21,7 +21,4 @@ in order to add a function calculate :
 * open Program.css file
 * in main fucntion add into FunctionsContainer your new function
 ```
-## Running Example
-```
-for a compused mission function : √((x∗3)+2)
-we will get the next output : 
+ 
